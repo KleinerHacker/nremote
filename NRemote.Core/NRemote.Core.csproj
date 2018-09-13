@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientState.cs" />
+    <Compile Include="Internal\Proxy\ProxyBuilder.cs" />
+    <Compile Include="Internal\Proxy\ProxyFactory.cs" />
+    <Compile Include="IRemote.cs" />
+    <Compile Include="LifecycleState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerState.cs" />
+    <Compile Include="Type\StateChangeEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NRemote.API\NRemote.API.csproj">
@@ -51,6 +67,9 @@
       <Project>{47b8a9ff-3df4-4773-b6dc-ab351bc94001}</Project>
       <Name>NRemote.Commons</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

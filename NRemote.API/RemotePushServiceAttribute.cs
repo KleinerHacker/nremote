@@ -4,7 +4,8 @@ using NRemote.API.Internal;
 namespace NRemote.API
 {
     /// <summary>
-    /// Marker attribute to mark an interface as Push Service
+    /// Mark an interface as remote push service to push data into <see cref="RemotePushModelAttribute"/> and <see cref="RemotePushObserverAttribute"/>,
+    /// see <see cref="PushAttribute"/>
     /// </summary>
     [AttributeUsage(AttributeTargets.Interface)]
     [RemoteService]

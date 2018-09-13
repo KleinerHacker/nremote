@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,15 +41,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exception\JRemoteAttributeException.cs" />
-    <Compile Include="Exception\JRemoteException.cs" />
-    <Compile Include="Exception\JRemoteExecutionException.cs" />
+    <Compile Include="ControlAttribute.cs" />
+    <Compile Include="EventAttribute.cs" />
+    <Compile Include="EventReceiverEventAttribute.cs" />
+    <Compile Include="Exception\NRemoteAttributeException.cs" />
+    <Compile Include="Exception\NRemoteException.cs" />
+    <Compile Include="Exception\NRemoteExecutionException.cs" />
+    <Compile Include="Exception\NRemoteExtensionException.cs" />
     <Compile Include="Internal\RemoteMethodAttribute.cs" />
     <Compile Include="Internal\RemoteServiceAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PushAttribute.cs" />
+    <Compile Include="PushModelPropertyAttribute.cs" />
+    <Compile Include="PushObserverEventAttribute.cs" />
+    <Compile Include="RemoteControlServiceAttribute.cs" />
+    <Compile Include="RemoteEventReceiverAttribute.cs" />
+    <Compile Include="RemoteEventServiceAttribute.cs" />
+    <Compile Include="RemotePushModelAttribute.cs" />
+    <Compile Include="RemotePushObserverAttribute.cs" />
     <Compile Include="RemotePushServiceAttribute.cs" />
+    <Compile Include="Type\PushItemUpdate.cs" />
     <Compile Include="Type\PushMethodType.cs" />
+    <Compile Include="Type\ReceiverEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

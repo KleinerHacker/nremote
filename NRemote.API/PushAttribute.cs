@@ -5,7 +5,7 @@ using NRemote.API.Type;
 namespace NRemote.API
 {
     /// <summary>
-    /// Mark method in an interface as push method.
+    /// Mark method in an interface as push method. Interface must be marked with <see cref="RemotePushServiceAttribute"/>.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method)]
     [RemoteMethod]
