@@ -5,7 +5,7 @@ namespace NRemote.API
     /// <summary>
     /// Mark a getter method in an interface as model based property. The interface must be annotated with <see cref="RemotePushModelAttribute"/>.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Method)]
+    [AttributeUsage(AttributeTargets.Property)]
     public class PushModelPropertyAttribute : Attribute
     {
         /// <summary>
