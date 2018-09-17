@@ -40,7 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attribute\KeepAliveAttribute.cs" />
+    <Compile Include="Attribute\RegistrationAttribute.cs" />
+    <Compile Include="Attribute\RemoteKeepAliveServiceAttribute.cs" />
+    <Compile Include="Attribute\RemoteRegistrationServiceAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\NRemote.API\NRemote.API.csproj">
+      <Project>{3df4038b-02c7-478c-a2de-cc7a7dbc6a84}</Project>
+      <Name>NRemote.API</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

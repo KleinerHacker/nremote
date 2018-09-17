@@ -11,6 +11,7 @@
     <AssemblyName>NRemote.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <LangVersion>7</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,9 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs" />
     <Compile Include="ClientState.cs" />
+    <Compile Include="Internal\Manager\ClientProxyManager.cs" />
+    <Compile Include="Internal\Manager\ServerProxyManager.cs" />
     <Compile Include="Internal\Proxy\ProxyBuilder.cs" />
     <Compile Include="Internal\Proxy\ProxyFactory.cs" />
+    <Compile Include="Internal\Registry\ClientRegistry.cs" />
+    <Compile Include="Internal\Type\ClientWrapper.cs" />
+    <Compile Include="Internal\Type\RemoteKeepAliveClientWrapper.cs" />
+    <Compile Include="Internal\Type\RemoteRegistrationClientWrapper.cs" />
+    <Compile Include="Internal\Validation\AnnotationValidator.cs" />
+    <Compile Include="Internal\Validation\Validator.cs" />
     <Compile Include="IRemote.cs" />
     <Compile Include="LifecycleState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +69,10 @@
     <Compile Include="Type\StateChangeEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Extensions\Network-Protocol\NRemote.Ext.NP.API\NRemote.Ext.NP.API.csproj">
+      <Project>{c3477be6-7a57-46e6-8bf6-30901cf3f8c9}</Project>
+      <Name>NRemote.Ext.NP.API</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NRemote.API\NRemote.API.csproj">
       <Project>{3df4038b-02c7-478c-a2de-cc7a7dbc6a84}</Project>
       <Name>NRemote.API</Name>

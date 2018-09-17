@@ -16,7 +16,7 @@ namespace NRemote.Core.Internal.Proxy
         /// </summary>
         /// <typeparam name="TA">Type of used method attribute</typeparam>
         /// <typeparam name="TD">Type of data object for proxy</typeparam>
-        private abstract class ProxyBuilder<TA, TD> where TA : Attribute
+        private abstract class ProxyBuilder<TA, TD> where TA : Attribute where TD : class
         {
             private static ILog Logger { get; } = LogManager.GetLogger(typeof(ProxyBuilder<TA,TD>));
 
@@ -26,7 +26,7 @@ namespace NRemote.Core.Internal.Proxy
             /// <param name="data"></param>
             /// <typeparam name="T"></typeparam>
             /// <returns></returns>
-            public T BuildProxy<T>(TD data)
+            public T BuildProxy<T>(TD data) where T : class 
             {
                 Logger.Debug("Create " + ProxyName + " proxy for " + typeof(T).FullName);
                 
