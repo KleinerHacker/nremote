@@ -8,9 +8,9 @@ namespace NRemote.Core.Internal.Validation
     internal static partial class Validator
     {
         /// <summary>
-        /// Abstract base for all service annotation validators
+        /// Abstract base for all service attribute validators
         /// </summary>
-        private abstract class AnnotationValidator
+        private abstract class AttributeValidator
         {
             public void Validate<T>() where T : class
             {

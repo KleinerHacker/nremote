@@ -48,6 +48,30 @@ namespace NRemote.Core.Internal.Manager
         public System.Type[] RemotePushModelClasses => _pushModelProxyDict.Keys.ToArray();
 
         #endregion
+        
+        #region Push Observer Proxy
+
+        public void AddRemotePushObserverProxy<T>() where T : class
+        {
+            var type = typeof(T);
+            if (_pushObserverProxyDict.ContainsKey(type))
+                throw new InvalidOperationException($"Remote push observer class already added: {type.FullName}");
+            
+            //TODO: Build Proxy
+        }
+
+        public T GetRemotePushObserverProxy<T>()
+        {
+            var type = typeof(T);
+            if (!_pushObserverProxyDict.ContainsKey(type))
+                throw new InvalidOperationException($"Unknown remote push observer class: {type.FullName}");
+
+            return (T) _pushObserverProxyDict[type];
+        }
+
+        public System.Type[] RemotePushObserverClasses => _pushObserverProxyDict.Keys.ToArray();
+
+        #endregion
 
         public RemoteRegistrationClientWrapper RemoteRegistrationClient => _remoteRegistrationClient;
 

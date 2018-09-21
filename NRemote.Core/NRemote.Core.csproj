@@ -60,7 +60,8 @@
     <Compile Include="Internal\Type\ClientWrapper.cs" />
     <Compile Include="Internal\Type\RemoteKeepAliveClientWrapper.cs" />
     <Compile Include="Internal\Type\RemoteRegistrationClientWrapper.cs" />
-    <Compile Include="Internal\Validation\AnnotationValidator.cs" />
+    <Compile Include="Internal\Validation\AttributeValidator.cs" />
+    <Compile Include="Internal\Validation\SimpleAttributeValidator.cs" />
     <Compile Include="Internal\Validation\Validator.cs" />
     <Compile Include="IRemote.cs" />
     <Compile Include="LifecycleState.cs" />
